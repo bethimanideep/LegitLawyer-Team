@@ -1,6 +1,6 @@
 const loaderOverlay = document.getElementById("loader-overlay");
 const container = document.getElementById("container");
-
+const google = document.getElementById("google-sign-in");
 
 let b1 = document.getElementById("b1")
 let email = document.getElementById("input1")
@@ -11,6 +11,10 @@ const encodedData = urlParams.get('user');
 
 // Decode the URL-safe string and parse it back into an object
 let userData = JSON.parse(decodeURIComponent(encodedData));
+google.addEventListener("click", () => {
+    loaderOverlay.style.display = "none";
+    container.style.opacity = "1";
+})
 
 // Access the user properties as needed
 if (userData != null) {
