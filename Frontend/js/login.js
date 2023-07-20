@@ -1,6 +1,6 @@
 const loaderOverlay = document.getElementById("loader-overlay");
 const container = document.getElementById("container");
-const google = document.getElementById("google-sign-in");
+const google = document.querySelector(".google-sign-in");
 
 let b1 = document.getElementById("b1")
 let email = document.getElementById("input1")
