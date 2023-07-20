@@ -12,8 +12,8 @@ const encodedData = urlParams.get('user');
 // Decode the URL-safe string and parse it back into an object
 let userData = JSON.parse(decodeURIComponent(encodedData));
 google.addEventListener("click", () => {
-    loaderOverlay.style.display = "none";
-    container.style.opacity = "1";
+    loaderOverlay.style.display = "flex";
+    container.style.opacity = "0.8";
 })
 
 // Access the user properties as needed

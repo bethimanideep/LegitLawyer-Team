@@ -44,7 +44,8 @@
             </button>
             <div style="text-align: center;">
                 <br>
-                <a class="google-sign-in" href="https://legit-lawyer-ega4.onrender.com/user/auth/google"><span class="buttonText">Sign in
+                <a class="google-sign-in" href="https://legit-lawyer-ega4.onrender.com/user/auth/google"><span
+                        class="buttonText">Sign in
                         with Google</span></a>
                 <br>
                 <br>
@@ -62,8 +63,11 @@
     let username = document.getElementById("username")
     let last = document.getElementById('last')
     let account = document.getElementById('account')
-    let gsign = document.querySelector('.google-sign-in')
-
+    let google = document.querySelector('.google-sign-in')
+    google.addEventListener("click", () => {
+        loaderOverlay.style.display = "flex";
+        container.style.opacity = "0.8";
+    })
     account.addEventListener("click", () => {
         window.location.href = "./index.html"
     })
