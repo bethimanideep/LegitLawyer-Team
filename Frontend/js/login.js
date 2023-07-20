@@ -29,7 +29,7 @@ b1.addEventListener("click", () => {
         email: email.value,
         password: password.value
     }
-    fetch("http://localhost:8080/user/login", {
+    fetch("https://legit-lawyer-ega4.onrender.com/user/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
