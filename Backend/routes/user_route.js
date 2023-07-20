@@ -73,7 +73,7 @@ userrouter.get("/newpasswordreset/:email", async (req, res) => {
   // Encode the serialized JSON as a URL-safe string
   const encodedData = encodeURIComponent(userData);
 
-  res.redirect(`https://subtle-scone-4c56f5.netlify.app/confirmpassword.html?user=${encodedData}`);
+  res.redirect(`https://legit-lawyer-team.vercel.app/confirmpassword.html?user=${encodedData}`);
 })
 
 userrouter.post("/confirmpassword", async (req, res) => {
@@ -101,7 +101,7 @@ userrouter.get('/status/:email', async (req, res) => {
   // Encode the serialized JSON as a URL-safe string
   const encodedData = encodeURIComponent(userData);
 
-  res.redirect(`https://subtle-scone-4c56f5.netlify.app/login.html?user=${encodedData}`)
+  res.redirect(`https://legit-lawyer-team.vercel.app/login.html?user=${encodedData}`)
 });
 
 userrouter.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
@@ -119,7 +119,7 @@ userrouter.get(
       // Encode the serialized JSON as a URL-safe string
       const encodedData = encodeURIComponent(userData);
 
-      res.redirect(`https://subtle-scone-4c56f5.netlify.app/index.html?user=${encodedData}`);
+      res.redirect(`https://legit-lawyer-team.vercel.app/index.html?user=${encodedData}`);
 
     } else {
       let obj = {
@@ -130,7 +130,7 @@ userrouter.get(
       let userfromdb = await outhuser.findOne({ email })
       const userData = JSON.stringify(userfromdb);
       const encodedData = encodeURIComponent(userData);
-      res.redirect(`https://subtle-scone-4c56f5.netlify.app/index.html?user=${encodedData}`);
+      res.redirect(`https://legit-lawyer-team.vercel.app/index.html?user=${encodedData}`);
     }
   }
 );
