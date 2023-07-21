@@ -50,7 +50,7 @@ async function cancelAppointment(email, time, booking) {
 
   // Make the API call or perform cancellation logic using the provided information
   // Replace the API_URL with your actual API endpoint for cancelling appointments
-  const API_URL = `https://legit-lawyer-ega4.onrender.com/client/cancle?email=${email}&&lawyer_id=${booking._id}&&time=${time}`;
+  const API_URL = `https://deploybackendwithvercel.vercel.app/client/cancle?email=${email}&&lawyer_id=${booking._id}&&time=${time}`;
 
   
 
@@ -64,7 +64,7 @@ async function cancelAppointment(email, time, booking) {
         'Appointment cancel ! ',
         'success'
     )
-     await fetch(`https://legit-lawyer-ega4.onrender.com/client/user?email=${email}`)
+     await fetch(`https://deploybackendwithvercel.vercel.app/client/user?email=${email}`)
   .then(response => response.json())
   .then(data =>{console.log("data",data),updateProfile(data)})
   .catch(error => console.error('Error:', error))
@@ -84,7 +84,7 @@ async function cancelAppointment(email, time, booking) {
     
     // Perform the fetch request
     console.log(speciality)
-  await  fetch(`https://legit-lawyer-ega4.onrender.com/client/get?specialization=${speciality}`)
+  await  fetch(`https://deploybackendwithvercel.vercel.app/client/get?specialization=${speciality}`)
     .then(function(response) {
     return response.json();
     })
@@ -106,7 +106,7 @@ var clientEmail = user.email
 // updateProfile(user)
 // console.log("profiledata",user)
 // Make the fetch request to retrieve profile data
-fetch(`https://legit-lawyer-ega4.onrender.com/client/user?email=${clientEmail}`)
+fetch(`https://deploybackendwithvercel.vercel.app/client/user?email=${clientEmail}`)
   .then(response => response.json())
   .then(data =>{console.log("data",data),updateProfile(data)})
   .catch(error => console.error('Error:', error));
@@ -125,7 +125,7 @@ fetch(`https://legit-lawyer-ega4.onrender.com/client/user?email=${clientEmail}`)
 
 // Perform the fetch request
 console.log(speciality)
-fetch(`https://legit-lawyer-ega4.onrender.com/client/get?specialization=${speciality}`)
+fetch(`https://deploybackendwithvercel.vercel.app/client/get?specialization=${speciality}`)
 .then(function(response) {
 return response.json();
 })
@@ -228,7 +228,7 @@ return async function() {
   var clientEmail = user.email
   var lawyerId=r._id;
   var bookingsloat = slot
-await fetch(`https://legit-lawyer-ega4.onrender.com/client/book/?clientEmail=${clientEmail}&&lawyerId=${lawyerId}&&bookingsloat=${bookingsloat}`)
+await fetch(`https://deploybackendwithvercel.vercel.app/client/book/?clientEmail=${clientEmail}&&lawyerId=${lawyerId}&&bookingsloat=${bookingsloat}`)
   .then(res=>res.json())
   .then(data=>{Swal.fire(
     'Good job!',
@@ -245,7 +245,7 @@ await fetch(`https://legit-lawyer-ega4.onrender.com/client/book/?clientEmail=${c
 
 
 
-  await fetch(`https://legit-lawyer-ega4.onrender.com/client/user?email=${clientEmail}`)
+  await fetch(`https://deploybackendwithvercel.vercel.app/client/user?email=${clientEmail}`)
   .then(response => response.json())
   .then(data =>{console.log("data",data),updateProfile(data)})
   .catch(error => console.error('Error:', error)) 
@@ -257,7 +257,7 @@ await fetch(`https://legit-lawyer-ega4.onrender.com/client/book/?clientEmail=${c
 
 // Perform the fetch request
 console.log(speciality)
-fetch(`https://legit-lawyer-ega4.onrender.com/client/get?specialization=${speciality}`)
+fetch(`https://deploybackendwithvercel.vercel.app/client/get?specialization=${speciality}`)
 .then(function(response) {
 return response.json();
 })

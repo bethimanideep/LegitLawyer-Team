@@ -489,7 +489,7 @@ article {
     console.log("id",id);
     document.addEventListener('DOMContentLoaded', () => {
       // Retrieve and display the lawyer's profile details
-      fetch(`https://legit-lawyer-ega4.onrender.com/client/get/${id}`)
+      fetch(`https://deploybackendwithvercel.vercel.app/client/get/${id}`)
         .then(response => response.json())
         .then(data => {
           const profileElement = document.getElementById('profile');
@@ -514,7 +514,7 @@ article {
 
         console.log(startTime,endTime,duration)
         // Send the time slot data to the server for processing
-       await fetch(`https://legit-lawyer-ega4.onrender.com/lawyer/update/${id}?startTime=${startTime}:00&&endTime=${endTime}:00&&slotDuration=${duration}`)
+       await fetch(`https://deploybackendwithvercel.vercel.app/lawyer/update/${id}?startTime=${startTime}:00&&endTime=${endTime}:00&&slotDuration=${duration}`)
           .then(response => response.json())
           .then(data => {
             // Handle the response from the server

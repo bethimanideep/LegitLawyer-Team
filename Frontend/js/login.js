@@ -33,7 +33,7 @@ b1.addEventListener("click", () => {
         email: email.value,
         password: password.value
     }
-    fetch("https://legit-lawyer-ega4.onrender.com/user/login", {
+    fetch("https://deploybackendwithvercel.vercel.app/user/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
