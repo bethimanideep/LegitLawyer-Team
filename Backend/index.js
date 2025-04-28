@@ -9,6 +9,8 @@ const { clientRoute } = require("./routes/client");
 const { lawyerRoute } = require("./routes/lawyers");
 app.use(cors())
 app.get('/',(req,res)=>{
+    console.log("mani");
+    
     res.send('welcome')
 })
 app.use("/user",userrouter)
